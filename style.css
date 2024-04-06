@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    background: linear-gradient(135deg,purple,rgb(204, 42, 42));
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.to-do{
+    width: 100%;
+    max-width: 450px;
+    height: 350px;
+    margin-top: 60px;
+    background: white;
+    padding: 20px 40px 50px;
+    border-radius: 12px;
+}
+.to-do h2{
+    color: rgb(10, 51, 123);
+    display: flex;
+    align-items: center;
+}
+.to-do-icon{
+    width: 50px;
+    height: 60px;
+    margin-left: 5px;
+}
+.input-space{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(235, 232, 227);
+    padding-left: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#input{
+    flex: 1;
+    outline: none;
+    font-size: 16px;
+    border: none;
+    background: transparent;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+.input-space button{
+    padding: 12px 28px;
+    background: lightcoral;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+#tasks li{
+    position: relative;
+    list-style: none;
+    font-size: 19px;
+    padding: 12px 8px 1px 40px;
+    user-select: none;
+    cursor: pointer;
+}
+ul li::before{
+    content: " ";
+    position: absolute;
+    left: 10px;
+    top: 13px;
+    height: 20px;
+    width: 20px;
+    background: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+}
+ul li.checked{
+    color: #7e7575;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background: url(images/checked.png);
+    background-size: cover;
+}
+li span{
+    position: absolute;
+    right: 0;
+    height: 28px;
+    width: 30px;
+    padding: 2px;
+    border-radius: 7px;
+}
+li span:hover{
+    background:rgb(217, 214, 214);
+}
+li img{
+    height: 24px;
+}
